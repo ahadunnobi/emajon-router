@@ -5,6 +5,7 @@ import Cart from "../Cart/Cart";
 import Reitem from "../Reitem/Reitem";
 import useCart from "../../hooks/useCart";
 import './order.css'
+import { Link } from "react-router-dom";
 
 
 const Order = () => {
@@ -29,7 +30,9 @@ const Order = () => {
         </div>
         <div className="cart-container-0">
           <Cart cart={cart}>
-            <h1></h1>
+            <Link to={'/inventory'}>
+                  <button>Procced chekout</button>
+            </Link>
           </Cart>
         </div>
       </div>

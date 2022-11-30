@@ -5,6 +5,7 @@ import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import './Shop.css';
 import useCart from '../../hooks/useCart';
+import { Link } from 'react-router-dom';
 
 const Shop = () => {
     const [products, setProducts] = useProducts();
@@ -42,7 +43,9 @@ const Shop = () => {
             </div>
             <div className="cart-container">
                 <Cart cart={cart}>
-                <button>Review Order</button>
+                    <Link to="/order">
+                        <button>Review Order</button>
+                    </Link>
                 </Cart>
             </div>
         </div>
